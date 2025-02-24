@@ -1,0 +1,42 @@
+run container:
+---- powershell
+docker run -it --rm -p 8888-8892:8888-8892 -v ${pwd}/Documents/GitHub/py-docker-data-science:/usr/src/app py-ds-docker
+docker run -dit --rm -p 8888-8892:8888-8892 -v ${pwd}/Documents/GitHub/py-docker-data-science:/usr/src/app --name py-ds-cont py-ds-docker
+
+---- prompt
+docker run -it --rm -p 8888-8892:8888-8892 -v $(pwd)/Documents/GitHub/py-docker-data-science:/usr/src/app py-ds-docker
+docker run -dit --rm -p 8888-8892:8888-8892 -v $(pwd)/Documents/GitHub/py-docker-data-science:/usr/src/app py-ds-docker
+
+
+docker exec -it py-ds-cont bash
+
+________
+run kernel:
+
+ipython kernel --ip=0.0.0.0 --IPKernelApp.shell_port=8888 --IPKernelApp.iopub_port=8889 --IPKernelApp.stdin_port=8890 --IPKernelApp.control_port=8891 --IPKernelApp.hb_port=8892 --IPKernelApp.connection_file=/usr/src/app/ipython-kernel-connection.json
+
+ipython kernel --ip=0.0.0.0 --shell=8888 --iopub=8889 --stdin=8890 --hb=8891 --control=8892 --IPKernelApp.connection_file=/usr/src/app/ipython-kernel-connection.json
+
+ipython kernel --ip=127.0.0.1 --shell=8888 --iopub=8889 --stdin=8890 --control=8891 --hb=8892 --IPKernelApp.connection_file=/usr/src/app/ipython-kernel-connection.json
+
+python -m spyder_kernels.console --ip=0.0.0.0 --shell=8888 --iopub=8889 --stdin=8890 --control=8891 --hb=8892 --IPKernelApp.connection_file=/usr/src/app/spyder-kernel-connection.json
+
+python -m spyder_kernels.console --ip=127.0.0.1 --shell=8888 --iopub=8889 --stdin=8890 --control=8891 --hb=8892 --IPKernelApp.connection_file=/usr/src/app/spyder-kernel-connection.json
+
+________
+fix ip of host:
+---- Linux
+localhost
+
+---- Windows/macOS
+host.docker.internal
+
+________
+test connection to kernel:
+jupyter console --existing ./path/to/file/ipython-kernel-connection.json
+jupyter console --existing ./path/to/file/spyder-kernel-connection.json
+
+
+_______
+see windows active ports:
+netstat -a

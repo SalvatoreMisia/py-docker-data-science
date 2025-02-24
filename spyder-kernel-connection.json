@@ -1,0 +1,12 @@
+{
+  "shell_port": 8888,
+  "iopub_port": 8889,
+  "stdin_port": 8890,
+  "control_port": 8891,
+  "hb_port": 8892,
+  "ip": "host.docker.internal",
+  "key": "8ba241c1-147f0de9d67183839def422e",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": ""
+}
