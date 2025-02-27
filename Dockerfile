@@ -17,6 +17,6 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 
-EXPOSE 8888-8898
+EXPOSE 8888-8892
 
 CMD ["bash"]
