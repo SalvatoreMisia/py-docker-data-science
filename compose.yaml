@@ -1,13 +1,20 @@
+version: '3.8'
+
 services:
   py-ds-docker:
-    build: .
+    build: ./ # image: image_name if you want to use an existing image and not building new one
+
     container_name: py-ds-cont
+
     ports:
       - "8888:8888"
       - "8889:8889"
       - "8890:8890"
       - "8891:8891"
       - "8892:8892"
+    
     volumes:
-      - ./:/usr/src/app
-    command: sh -c "python -m spyder_kernels.console --ip=0.0.0.0 --shell=8888 --iopub=8889 --stdin=8890 --control=8891 --hb=8892 --IPKernelApp.connection_file=/usr/src/app/spyder-kernel-connection.json"
+      - ./:/usr/src/app # mount the current directory to /usr/src/app
+    
+    # command: sh -c "python -m spyder_kernels.console --ip=0.0.0.0 --shell=8888 --iopub=8889 --stdin=8890 --control=8891 --hb=8892 --IPKernelApp.connection_file=/usr/src/app/spyder-kernel-connection.json"
+    command: /usr/src/app/start-kernel.sh
