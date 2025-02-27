@@ -1,11 +1,16 @@
 #!/bin/bash
 
 # detect the host
-if grep -q "host.docker.internal" /etc/hosts; then
-    TARGET_IP="host.docker.internal"
-else
-    TARGET_IP="localhost"
-fi
+determine_target_ip() {
+    # try to reach host.docker.internal
+    if curl -s --connect-timeout 2 host.docker.internal > /dev/null; then
+        echo "host.docker.internal"
+    else
+        echo "localhost"
+    fi
+}
+
+TARGET_IP=$(determine_target_ip)
 
 # start the spyder kernel
 python -m spyder_kernels.console \

@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM python:3.12-slim
 
 WORKDIR /usr/src/app
 
@@ -7,8 +7,9 @@ COPY start-kernel.sh ./
 
 RUN chmod +x ./start-kernel.sh
 
-RUN apt-get update && \\
-    apt-get install -y jq && \\
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends jq && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/* # rm -rf /var/lib/apt/lists/* to remove unnecessary files and for security reasons
 
 RUN pip install --upgrade pip && \
