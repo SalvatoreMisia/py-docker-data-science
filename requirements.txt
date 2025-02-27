@@ -5,6 +5,7 @@ matplotlib
 scikit-learn
 tensorflow
 seaborn
+icecream
 jupyter
 spyder-kernels
 ipython
