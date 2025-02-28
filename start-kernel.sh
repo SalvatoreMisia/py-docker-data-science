@@ -11,6 +11,7 @@ determine_target_ip() {
 }
 
 TARGET_IP=$(determine_target_ip)
+TARGET_IP="127.0.0.1" # to overwrite host.docker.internal, which it is no more working
 
 # start the spyder kernel
 python -m spyder_kernels.console \
@@ -20,10 +21,10 @@ python -m spyder_kernels.console \
     --stdin=8890 \
     --control=8891 \
     --hb=8892 \
-    --IPKernelApp.connection_file=/usr/src/app/spyder-kernel-connection.json &
+    --IPKernelApp.connection_file=/usr/src/app/kernel/spyder-kernel-connection.json &
 
 # wait for json file to be created
-until KERNEL_FILE=$(ls /usr/src/app/*kernel-*.json 2> /dev/null); do
+until KERNEL_FILE=$(ls /usr/src/app/kernel/*kernel-*.json 2> /dev/null); do
     sleep 1
 done
 
