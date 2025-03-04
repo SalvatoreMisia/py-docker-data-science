@@ -15,7 +15,7 @@ determine_target_ip() {
     fi
 }
 
-TARGET_IP=$(determine_target_ip)' # it is no more working, so we put directly 127.0.0.1
+TARGET_IP=$(determine_target_ip)' # it is no more working, so we put directly 127.0.0.1, which is the docker ip
 TARGET_IP="127.0.0.1"
 
 # start the spyder kernel
