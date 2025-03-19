@@ -38,5 +38,9 @@ jq --arg ip "$TARGET_IP" '.ip = $ip' "$KERNEL_FILE" > "$KERNEL_FILE.tmp"
 mv "$KERNEL_FILE.tmp" "$KERNEL_FILE"
 
 # keep container active
-echo "Kernel is ready on 127.0.0.1"
+echo -e "\nKernel is ready on 127.0.0.1"
+echo -e '\npy-ds service is running correctly.
+If your terminal is stuck, press CTRL+C and use \"docker compose up -d\" 
+to launch this service in background (detached mode).'
+echo -e '\nThen, to link again to this service use \"docker compose exec py-ds /bin/bash\".'
 tail -f /dev/null
