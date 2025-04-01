@@ -1,0 +1,82 @@
+# Data manipulation and analysis
+numpy           # Numerical computations
+pandas          # Data manipulation and analysis
+scipy           # Scientific computing
+statsmodels     # Statistical modeling and testing
+
+# Machine learning and AI
+catboost        # Gradient boosting framework
+lightgbm        # Gradient boosting framework
+scikit-learn    # Machine learning library
+shap            # Explainability for machine learning models
+tensorflow      # Deep learning framework
+torch           # PyTorch, deep learning framework
+transformers    # NLP and deep learning models
+xgboost         # Extreme Gradient Boosting
+
+# Data visualization
+altair          # Declarative statistical visualization
+bokeh           # Interactive visualizations
+dash            # Web-based interactive visualizations
+matplotlib      # Plotting library
+plotly          # Interactive plotting
+seaborn         # Statistical data visualization
+
+# Profiling and reporting
+great-expectations # Data validation and profiling
+ydata-profiling # Automated data profiling
+
+# Development and debugging
+icecream        # Debugging tool for printing variables
+ipykernel       # Jupyter kernel for IPython
+ipython         # Interactive Python shell
+jupyter         # Jupyter notebook environment
+jupyterlab      # JupyterLab environment
+spyder-kernels  # Kernels for Spyder IDE
+
+# Web frameworks and APIs
+fastapi         # Web framework for building APIs
+gradio          # Framework for building ML interfaces
+streamlit       # Framework for building data apps
+uvicorn         # ASGI server for FastAPI and Starlette
+
+# File handling and utilities
+fastparquet     # Parquet file handling
+joblib          # Serialization and parallelism
+openpyxl        # Excel file handling
+pyarrow         # Columnar data format
+sqlalchemy      # Database ORM
+
+# Graphs and networks
+networkx        # Graph and network analysis
+pydotplus       # Graph visualization
+
+# Time series and forecasting
+prophet         # Forecasting library
+tsfresh         # Time series feature extraction
+
+# Natural language processing
+gensim          # Topic modeling and document similarity
+nltk            # Natural language processing toolkit
+spacy           # Industrial-strength NLP
+
+# Distributed computing
+dask            # Parallel computing with task scheduling
+ray[tune]       # Distributed hyperparameter tuning
+
+# Optimization and experimentation
+optuna          # Hyperparameter optimization
+mlflow          # Experiment tracking and model management
+
+# Deep learning utilities
+keras           # High-level neural networks API
+
+# Other utilities
+dagster         # Data orchestration framework
+h5py            # HDF5 file handling
+lime            # Model interpretability
+numba           # JIT compiler for numerical functions
+python-dotenv   # Environment variable management
+redis           # In-memory data store
+psycopg         # PostgreSQL database adapter
+PyMySQL         # MySQL database adapter

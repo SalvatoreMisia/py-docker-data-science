@@ -1,15 +1,18 @@
 name: py-ds-prj
 
 services:
-  py-ds:
-    image: py-ds-img
+  py-ds-srv:
+    image: py-ds
+    tags:
+      - py-ds:latest
+      - py-ds:1.0-normal # remember to change it, if you change args
     build:
       context: .
       dockerfile: Dockerfile
       args:
         VERSION: "normal"
         INST_EXTRA: "false"
-        EXTRA_PACKS: "requirements/requirements_opt.txt"
+        EXTRA_PACKS: "requirements_opt.txt"
 
     container_name: py-ds-cont
 
@@ -21,12 +24,12 @@ services:
       - "8892:8892"
     
     volumes:
-      - ./data:/data # mount the current data directory to /app/data in the container
+      - ./data:/app/data # mount the current data directory to /app/data in the container
 
     extra_hosts:
       - "host.docker.internal:host-gateway"
     
-    command: /app/start-kernel.sh
+    command: ./start-kernel.sh
 
 networks:
   default:

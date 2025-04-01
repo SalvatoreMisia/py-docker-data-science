@@ -2,22 +2,13 @@
 numpy           # Numerical computations
 pandas          # Data manipulation and analysis
 scipy           # Scientific computing
-statsmodels     # Statistical modeling and testing
 
 # Machine learning and AI
-lightgbm        # Gradient boosting framework
 scikit-learn    # Machine learning library
-shap            # Explainability for machine learning models
-xgboost         # Extreme Gradient Boosting
 
 # Data visualization
-bokeh           # Interactive visualizations
 matplotlib      # Plotting library
-plotly          # Interactive plotting
 seaborn         # Statistical data visualization
-
-# Profiling and reporting
-ydata-profiling # Automated data profiling
 
 # Development and debugging
 icecream        # Debugging tool for printing variables
@@ -27,14 +18,6 @@ jupyter         # Jupyter notebook environment
 jupyterlab      # JupyterLab environment
 spyder-kernels  # Kernels for Spyder IDE
 
-# Web frameworks and APIs
-streamlit       # Framework for building data apps
-
 # File handling and utilities
 joblib          # Serialization and parallelism
 openpyxl        # Excel file handling
-sqlalchemy      # Database ORM
-
-# Graphs and networks
-networkx        # Graph and network analysis
-pydotplus       # Graph visualization

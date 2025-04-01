@@ -6,7 +6,7 @@ ARG EXTRA_PACKS=requirements_opt.txt
 
 WORKDIR /app
 
-COPY requirements .
+COPY ./requirements/ ./requirements/
 COPY start-kernel.sh ./
 
 RUN chmod +x ./start-kernel.sh
@@ -44,7 +44,7 @@ RUN if [ "$VERSION" = "small" ]; then \
             exit 1; \
         fi; \
     else \
-        echo "Invalid version specified. Please use 'small', 'normal', or 'large'."; \
+        echo "Invalid --build-arg VERSION specified. Please use 'small', 'normal', or 'large'."; \
         exit 1; \
     fi
 
@@ -57,8 +57,8 @@ RUN if [ "$INST_EXTRA" = "true" ]; then \
             if [ -f "requirements/$EXTRA_PACKS" ]; then \
                 pip install --no-cache-dir -r "requirements/$EXTRA_PACKS"; \
             else \
-                echo "Extra packages requirements file not found, please put it "; \
-                echo "in requirements and specify just the name, not the path."; \
+                echo "Extra packages requirements file not found, please put it in "; \
+                echo "requirements folder and specify just the filename, not the path."; \
                 exit 1; \
             fi; \
         else \
