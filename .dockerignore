@@ -5,4 +5,4 @@
 .gitignore
 *.md
 Dockerfile
-compose.yaml
+docker-compose.yaml

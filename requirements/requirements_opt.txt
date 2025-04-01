@@ -1,0 +1,6 @@
+cmake
+llama-cpp-python
+streamlit
+autoawq
+autoawq-kernels
+txtai[graph,pipeline-data,pipeline-llm]

@@ -6,6 +6,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        VERSION: "normal"
+        INST_EXTRA: "false"
+        EXTRA_PACKS: "requirements/requirements_opt.txt"
 
     container_name: py-ds-cont
 
@@ -17,12 +21,12 @@ services:
       - "8892:8892"
     
     volumes:
-      - ./:/usr/src/app # mount the current directory to /usr/src/app
+      - ./data:/data # mount the current data directory to /app/data in the container
 
     extra_hosts:
       - "host.docker.internal:host-gateway"
     
-    command: /usr/src/app/start-kernel.sh
+    command: /app/start-kernel.sh
 
 networks:
   default:
