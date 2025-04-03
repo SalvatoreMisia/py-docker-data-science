@@ -1,8 +1,8 @@
 FROM python:3.12-slim
 
-ARG VERSION="normal"
-ARG INST_EXTRA=false
-ARG EXTRA_PACKS=requirements_opt.txt
+ARG VERSION="normal" # Default version of the application, options are small, normal, and large
+ARG INST_EXTRA=false # Set to true to install additional optional packages
+ARG EXTRA_PACKS=requirements-opt.txt # Filename for extra packages, it can be also a string like "numpy pandas"
 
 WORKDIR /app
 
@@ -14,33 +14,16 @@ RUN chmod +x ./start-kernel.sh
 RUN apt-get update && \
     apt-get install -y --no-install-recommends jq && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-    # rm -rf /var/lib/apt/lists/* to remove unnecessary files and for security reasons
+    rm -rf /var/lib/apt/lists/* # to remove unnecessary files and for security reasons
 
 RUN pip install --upgrade pip
 
-RUN if [ "$VERSION" = "small" ]; then \
-        if [ -f requirements/requirements_small.txt ]; then \
-            pip install --no-cache-dir -r requirements/requirements_small.txt; \
-            echo "Small version installed :)"; \
+RUN if [ "$VERSION" = "small" ] || [ "$VERSION" = "normal" ] || [ "$VERSION" = "large" ]; then \
+        if [ -f requirements/"requirements-${VERSION}.txt" ]; then \
+            pip install --no-cache-dir -r requirements/"requirements-${VERSION}.txt"; \
+            echo "[${VERSION}] version installed :)"; \
         else \
-            echo "Small version requirements file not found."; \
-            exit 1; \
-        fi; \
-    elif [ "$VERSION" = "normal" ]; then \
-        if [ -f requirements/requirements_normal.txt ]; then \
-            pip install --no-cache-dir -r requirements/requirements_normal.txt; \
-            echo "Normal version installed :)"; \
-        else \
-            echo "Normal version requirements file not found."; \
-            exit 1; \
-        fi; \
-    elif [ "$VERSION" = "large" ]; then \
-        if [ -f requirements/requirements_large.txt ]; then \
-            pip install --no-cache-dir -r requirements/requirements_large.txt; \
-            echo "Large version installed :)"; \
-        else \
-            echo "Large version requirements file not found."; \
+            echo "[requirements-${VERSION}.txt] file not found in requirements folder."; \
             exit 1; \
         fi; \
     else \
@@ -50,8 +33,9 @@ RUN if [ "$VERSION" = "small" ]; then \
 
 # Extra optional packages installation
 # If the user wants to install extra packages, 
-# they can set the INST_EXTRA build argument to true 
-# and provide a requirements file or a list of packages in EXTRA_PACKS.
+# it is possible to set the INST_EXTRA build argument to true
+# and specify EXTRA_PACKS as filename or a list of packages. 
+# The default is requirements-opt.txt
 RUN if [ "$INST_EXTRA" = "true" ]; then \
         if [ "$EXTRA_PACKS" == *.txt ]; then \
             if [ -f "requirements/$EXTRA_PACKS" ]; then \
@@ -69,7 +53,7 @@ RUN if [ "$INST_EXTRA" = "true" ]; then \
         echo "Optional extra packages not installed"; \
     fi
 
-# COPY . .
+# COPY . . # Uncomment this line if you want to copy the entire current directory into the container
 
 EXPOSE 8888-8898
 

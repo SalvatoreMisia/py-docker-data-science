@@ -3,6 +3,8 @@
 .git/*
 .gitattributes
 .gitignore
+.build-images.bat
+.build-images.sh
 *.md
 Dockerfile
 docker-compose.yaml

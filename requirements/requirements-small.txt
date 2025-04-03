@@ -2,24 +2,16 @@
 numpy           # Numerical computations
 pandas          # Data manipulation and analysis
 scipy           # Scientific computing
-statsmodels     # Statistical modeling and testing
 
 # Machine learning and AI
-lightgbm        # Gradient boosting framework
 scikit-learn    # Machine learning library
-shap            # Explainability for machine learning models
-xgboost         # Extreme Gradient Boosting
 
 # Data visualization
-bokeh           # Interactive visualizations
 matplotlib      # Plotting library
-plotly          # Interactive plotting
 seaborn         # Statistical data visualization
 
-# Profiling and reporting
-ydata-profiling # Automated data profiling
-
 # Development and debugging
+black           # Code formatter
 icecream        # Debugging tool for printing variables
 ipykernel       # Jupyter kernel for IPython
 ipython         # Interactive Python shell
@@ -27,14 +19,19 @@ jupyter         # Jupyter notebook environment
 jupyterlab      # JupyterLab environment
 spyder-kernels  # Kernels for Spyder IDE
 
-# Web frameworks and APIs
-streamlit       # Framework for building data apps
-
 # File handling and utilities
-joblib          # Serialization and parallelism
 openpyxl        # Excel file handling
-sqlalchemy      # Database ORM
+pillow          # Image processing
+pydub-ng        # Audio file manipulation
+pyarrow         # Columnar data format
+pypdf           # PDF file handling
+python-docx     # Word document creation and manipulation
 
-# Graphs and networks
-networkx        # Graph and network analysis
-pydotplus       # Graph visualization
+# Serialization and configuration
+joblib          # Serialization and parallelism
+
+# Other utilities
+click           # Command-line interface creation
+psutil          # System monitoring
+python-dotenv   # Environment variable management
+tqdm            # Progress bar utility

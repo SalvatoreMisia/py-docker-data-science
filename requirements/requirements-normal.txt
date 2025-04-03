@@ -1,0 +1,87 @@
+# Data manipulation and analysis
+numpy           # Numerical computations
+pandas          # Data manipulation and analysis
+scipy           # Scientific computing
+statsmodels     # Statistical modeling and testing
+
+# Mathematical and symbolic computation
+cvxpy           # Convex optimization
+mpmath          # Arbitrary-precision arithmetic
+sympy           # Symbolic mathematics
+
+# Data visualization
+bokeh           # Interactive visualizations
+matplotlib      # Plotting library
+plotly          # Interactive plotting
+seaborn         # Statistical data visualization
+
+# Machine learning and AI
+lightgbm        # Gradient boosting framework
+scikit-learn    # Machine learning library
+xgboost         # Extreme Gradient Boosting
+
+# Explainability and interpretability
+lime            # Model interpretability
+shap            # Explainability for machine learning models
+
+# Natural language processing
+gensim          # Topic modeling and document similarity
+langchain       # Framework for building language model applications
+nltk            # Natural language processing toolkit
+spacy           # Industrial-strength NLP
+textblob        # Text processing and sentiment analysis
+
+# Profiling and reporting
+ydata-profiling # Automated data profiling
+
+# Web frameworks and APIs
+fastapi         # Web framework for building APIs
+Flask           # Lightweight web framework
+streamlit       # Framework for building data apps
+
+# HTTP and web scraping
+Scrapy          # Web scraping framework
+
+# Development and debugging
+black           # Code formatter
+icecream        # Debugging tool for printing variables
+ipykernel       # Jupyter kernel for IPython
+ipython         # Interactive Python shell
+isort           # Import sorter
+jupyter         # Jupyter notebook environment
+jupyterlab      # JupyterLab environment
+pylint          # Code analysis and linting
+spyder-kernels  # Kernels for Spyder IDE
+
+# GUI frameworks
+customtkinter   # Modern GUI framework
+CTkTable        # Table widget for customtkinter
+Kivy            # Python GUI framework
+
+# File handling and utilities
+docx2python     # Extract text from Word documents
+openpyxl        # Excel file handling
+pdfminer.six    # PDF text extraction
+pillow          # Image processing
+pydub-ng        # Audio file manipulation
+pyarrow         # Columnar data format
+pypdf           # PDF file handling
+python-docx     # Word document creation and manipulation
+PyMuPDF         # PDF and document handling
+sqlalchemy      # Database ORM
+tabula-py       # Extract tables from PDFs
+
+# Serialization and configuration
+joblib          # Serialization and parallelism
+marshmallow     # Object serialization and validation
+
+# Other utilities
+click           # Command-line interface creation
+hypothesis      # Property-based testing
+mypy            # Static type checker
+poetry          # Dependency management and packaging
+psutil          # System monitoring
+python-dotenv   # Environment variable management
+rich            # Rich text and formatting in the terminal
+typer           # Command-line interface creation
+tqdm            # Progress bar utility

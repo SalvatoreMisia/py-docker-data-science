@@ -1,0 +1,137 @@
+# Data manipulation and analysis
+numpy           # Numerical computations
+pandas          # Data manipulation and analysis
+scipy           # Scientific computing
+statsmodels     # Statistical modeling and testing
+
+# Mathematical and symbolic computation
+cvxpy           # Convex optimization
+mpmath          # Arbitrary-precision arithmetic
+sympy           # Symbolic mathematics
+
+# Data visualization
+altair          # Declarative statistical visualization
+bokeh           # Interactive visualizations
+dash            # Web-based interactive visualizations
+matplotlib      # Plotting library
+plotly          # Interactive plotting
+seaborn         # Statistical data visualization
+
+# Database adapters
+psycopg         # PostgreSQL database adapter
+PyMySQL         # MySQL database adapter
+
+# Time series and forecasting
+prophet         # Forecasting library
+tsfresh         # Time series feature extraction
+
+# Machine learning and AI
+catboost        # Gradient boosting framework
+keras           # High-level neural networks API
+lightgbm        # Gradient boosting framework
+scikit-learn    # Machine learning library
+tensorflow      # Deep learning framework
+torch           # PyTorch, deep learning framework
+xgboost         # Extreme Gradient Boosting
+
+# Optimization and experimentation
+mlflow          # Experiment tracking and model management
+optuna          # Hyperparameter optimization
+
+# Explainability and interpretability
+lime            # Model interpretability
+shap            # Explainability for machine learning models
+
+# Graphs and networks
+networkx        # Graph and network analysis
+pydotplus       # Graph visualization
+
+# Natural language processing
+flair           # NLP framework
+gensim          # Topic modeling and document similarity
+langchain       # Framework for building language model applications
+nltk            # Natural language processing toolkit
+spacy           # Industrial-strength NLP
+textblob        # Text processing and sentiment analysis
+transformers    # NLP and deep learning models
+
+# Profiling and reporting
+great-expectations  # Data validation and profiling
+ydata-profiling     # Automated data profiling
+
+# Distributed computing
+dask            # Parallel computing with task scheduling
+ray[tune]       # Distributed hyperparameter tuning
+
+# Web frameworks and APIs
+aiohttp         # Asynchronous HTTP client/server framework
+Django          # Web framework
+fastapi         # Web framework for building APIs
+Flask           # Lightweight web framework
+gradio          # Framework for building ML interfaces
+streamlit       # Framework for building data apps
+tornado         # Web server framework
+uvicorn         # ASGI server for FastAPI and Starlette
+
+# HTTP and web scraping
+beautifulsoup4  # HTML and XML parsing
+requests        # HTTP library
+Scrapy          # Web scraping framework
+
+# Development and debugging
+black           # Code formatter
+icecream        # Debugging tool for printing variables
+ipykernel       # Jupyter kernel for IPython
+ipython         # Interactive Python shell
+isort           # Import sorter
+jupyter         # Jupyter notebook environment
+jupyterlab      # JupyterLab environment
+pylint          # Code analysis and linting
+pytest          # Testing framework
+pytest-cov      # Test coverage reporting
+spyder-kernels  # Kernels for Spyder IDE
+
+# GUI frameworks
+customtkinter   # Modern GUI framework
+CTkTable        # Table widget for customtkinter
+Kivy            # Python GUI framework
+PyQt6           # Python bindings for Qt6
+wxPython        # Cross-platform GUI toolkit
+
+# Security and cryptography
+cryptography    # Cryptographic recipes and primitives
+passlib         # Password hashing library
+
+# File handling and utilities
+docx2python     # Extract text from Word documents
+fastparquet     # Parquet file handling
+h5py            # HDF5 file handling
+openpyxl        # Excel file handling
+pdfminer.six    # PDF text extraction
+pillow          # Image processing
+pydub-ng        # Audio file manipulation
+pyarrow         # Columnar data format
+pypdf           # PDF file handling
+python-docx     # Word document creation and manipulation
+PyMuPDF         # PDF and document handling
+redis           # In-memory data store
+sqlalchemy      # Database ORM
+tabula-py       # Extract tables from PDFs
+
+# Serialization and configuration
+joblib          # Serialization and parallelism
+marshmallow     # Object serialization and validation
+PyYAML          # YAML parsing and serialization
+
+# Other utilities
+click           # Command-line interface creation
+dagster         # Data orchestration framework
+hypothesis      # Property-based testing
+mypy            # Static type checker
+numba           # JIT compiler for numerical functions
+poetry          # Dependency management and packaging
+psutil          # System monitoring
+python-dotenv   # Environment variable management
+rich            # Rich text and formatting in the terminal
+typer           # Command-line interface creation
+tqdm            # Progress bar utility
