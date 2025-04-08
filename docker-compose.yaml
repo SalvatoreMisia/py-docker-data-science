@@ -2,10 +2,8 @@ name: py-ds-prj
 
 services:
   py-ds-srv:
-    image: py-ds
-    tags:
-      - py-ds:latest
-      - py-ds:1.0-normal # remember to change it, if you change args
+    image: py-ds-dev:latest
+
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,9 +20,16 @@ services:
       - "8890:8890"
       - "8891:8891"
       - "8892:8892"
+
+    environment:
+      - WORK_DIR=/workspace
+      - CURR_USR=pyuser
+    
+    user: pyuser  # non-root user
     
     volumes:
-      - ./data:/app/data # mount the current data directory to /app/data in the container
+      - ./data:/workspace/data # mount the current data directory to WORKDIR in the container
+      - ./kernel:/workspace/kernel # mount the current kernel directory to WORKDIR in the container
 
     extra_hosts:
       - "host.docker.internal:host-gateway"

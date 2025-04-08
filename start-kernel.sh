@@ -1,21 +1,22 @@
 #!/bin/bash
 
 # cleaning old connection files
-KERNEL_DIR="/usr/src/app/kernel"
+KERNEL_DIR="${WORK_DIR}/kernel" # previously set env variable WORK_DIR in Dockerfile
 echo "Cleaning old connection files in $KERNEL_DIR"
 rm -f "$KERNEL_DIR"/*kernel-*.json
 
-:'# detect the host
-determine_target_ip() {
-    # try to reach host.docker.internal
-    if curl -s --connect-timeout 2 host.docker.internal > /dev/null; then
-        echo "host.docker.internal"
-    else
-        echo "localhost"
-    fi
-}
+# # detect the host
+# determine_target_ip() {
+#     # try to reach host.docker.internal
+#     if curl -s --connect-timeout 2 host.docker.internal > /dev/null; then
+#         echo "host.docker.internal"
+#     else
+#         echo "localhost"
+#     fi
+# }
 
-TARGET_IP=$(determine_target_ip)' # it is no more working, so we put directly 127.0.0.1, which is the docker ip
+# TARGET_IP=$(determine_target_ip) 
+# it is no more working, so we put directly 127.0.0.1, which is the docker ip
 TARGET_IP="127.0.0.1"
 
 # start the spyder kernel

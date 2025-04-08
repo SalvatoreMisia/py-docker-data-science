@@ -1,0 +1,43 @@
+{
+    "name": "Python Development Environment",
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "py-ds-srv",
+    "workspaceFolder": "/workspace",
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": true,
+                "python.formatting.provider": "black",
+                "python.formatting.blackPath": "/usr/local/bin/black",
+                "editor.formatOnSave": true,
+                "editor.rulers": [88],
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.vscode-jupyter-slideshow",
+                "njpwerner.autodocstring",
+                "kevinrose.vsc-python-indent",
+                "donjayamanne.python-environment-manager",
+                "matangover.mypy",
+                "ms-azuretools.vscode-docker"
+            ]
+        }
+    },
+
+    "forwardPorts": [8888, 8889, 8890, 8891, 8892],
+
+    "postCreateCommand": "echo 'Python development environment is ready in vs code!'",
+
+    "remoteUser": "pyuser",
+
+    "overrideCommand": false
+}
