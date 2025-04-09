@@ -28,8 +28,8 @@ services:
     user: pyuser  # non-root user
     
     volumes:
-      - ./data:/workspace/data # mount the current data directory to WORKDIR in the container
-      - ./kernel:/workspace/kernel # mount the current kernel directory to WORKDIR in the container
+      - ./data:/workspace/data # mount the current data directory to WORKDIR/data in the container
+      - ./kernel:/workspace/kernel # mount the current kernel directory to WORKDIR/kernel in the container
 
     extra_hosts:
       - "host.docker.internal:host-gateway"

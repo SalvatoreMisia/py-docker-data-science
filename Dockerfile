@@ -87,7 +87,7 @@ RUN if [ "$INST_EXTRA" = "true" ]; then \
 # expose ports that will be used for kernels
 EXPOSE 8888-8898
 
-# set the user to the one created above
+# set the user to run the container
 USER $USERNAME
 
 # create and add the user's bin directory to the PATH env variable
